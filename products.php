@@ -112,7 +112,6 @@ $result = mysqli_query($conn, $sql);
 <div class="product-container">
     <?php
     if (mysqli_num_rows($result) > 0) {
-        // Output data of each row
         while($row = mysqli_fetch_assoc($result)) {
             echo "<div class='product'>";
             echo "<h3>" . $row["name"] . "</h3>";

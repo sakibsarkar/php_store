@@ -13,6 +13,9 @@
         <a class="nav-link" href="products.php">all products</a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link" href="file_upload.php">Upload file</a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="add_product.php">Add  product</a>
       </li>
    
