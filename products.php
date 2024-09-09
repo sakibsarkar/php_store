@@ -113,11 +113,17 @@ $result = mysqli_query($conn, $sql);
     <?php
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
+            $_id = $row["_id"];
             echo "<div class='product'>";
             echo "<h3>" . $row["name"] . "</h3>";
             echo "<p>" . $row["description"] . "</p>";
             echo "<p class='product-price'>Price: $" . $row["price"] . "</p>";
             echo "<button onclick='deleteProduct(\"" . $row["_id"] . "\")'>Delete</button>";
+            echo " <form action='api/add_to_cart_.php' method='post'>
+                    <input type='hidden' name='_id' value='$_id'>
+                    <input type='number' name='quantity' value='1' min='1'>
+                    <button type='submit'>Add to Cart</button>
+                </form>";
             echo "</div>";
         }
     } else {

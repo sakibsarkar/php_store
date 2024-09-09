@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
             $_SESSION['role'] = $row['role'];
+            $_SESSION['user_id'] = $row['_id'];
             echo 'Login successful <a href="../index.php">Go to home</a> ';
         } else {
             echo "Invalid credentials 1";
